@@ -75,7 +75,7 @@ There are several types of operator supported by Cahmann, they are listed below.
 |   Unary           |   true        |   True expression             |   Boolean
 |   Unary           |   false       |   False expression            |   Boolean
 |   Unary           |   cnt         |   Count expression            |   Tables
-|
+| -
 | Arithmetic        |   ++          |   Increment (by one)          |   Numbers and chars
 | Arithmetic        |   --          |   Decrement (by one)          |   Numbers and chars
 | Arithmetic        |   **          |   Exponentiate                |   Numbers and chars
@@ -84,27 +84,27 @@ There are several types of operator supported by Cahmann, they are listed below.
 | Arithmetic        |   *           |   Multiplication              |   Numbers and chars
 | Arithmetic        |   /           |   Division                    |   Numbers and chars
 | Arithmetic        |   %           |   Modulo (remainder)          |   Numbers and chars
-|
+| -
 | Logical           |   !           |   Negation                    |   Booleans
 | Logical           |   &&          |   Short-circuit AND           |   Booleans
 | Logical           |   ||          |   Short-circuit OR            |   Booleans
-|
+| -
 | Bitwise           |   &           |   Bitwise AND                 |   Booleans, numbers and chars
 | Bitwise           |   |           |   Bitwise OR                  |   Booleans, numbers and chars
 | Bitwise           |   ^           |   Bitwise XOR                 |   Booleans, numbers and chars
 | Bitwise           |   ~           |   Bitwise complement          |   Numbers and chars
 | Bitwise           |   >>          | Bitwise shift to the right    |   Numbers and chars
 | Bitwise           |   <<          | Bitwise shift to the left     |   Numbers and chars
-|
+| -
 | Equality          |   ==          |   Equality check              |   Booleans, numbers, chars, tables, strings
 | Inequality        |   !=          |   Inequality check            |   Booleans, numbers, chars, tables, strings
 | Inequality        |   <>          |   Inequality check            |   Booleans, numbers, chars, tables, strings
-|
+| -
 | Comparison        |   <           |   Less than Comparison        |   Numbers and chars
 | Comparison        |   <=          |   Less than or equal to       |   Numbers and chars
 | Comparison        |   >           |   Greater than Comparison     |   Numbers and chars
 | Comparison        |   >=          |   Greater than or equal to    |   Numbers and chars
-|
+| -
 | Member access     |   []          |   Array access                |   Tables
 | Member access     |   .           |   Member access               |   Tables
 
