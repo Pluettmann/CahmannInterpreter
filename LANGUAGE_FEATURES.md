@@ -70,43 +70,66 @@ As any language, Cahmann requires operators in order to function correctly and p
 
 There are several types of operator supported by Cahmann, they are listed below.
 
-| Operator Type     | Operator      | Description                   |   Applicable to |
-|-------------------|---------------|-------------------------------|-----------------|
-|   Unary           |   true        |   True expression             |   Boolean
-|   Unary           |   false       |   False expression            |   Boolean
-|   Unary           |   cnt         |   Count expression            |   Tables
+| Operator Type     | Operator      | Description                           |   Applicable to |
+|-------------------|---------------|---------------------------------------|-----------------|
+|   Unary           |   true        |   True expression                     |   Boolean
+|   Unary           |   false       |   False expression                    |   Boolean
+|   Unary           |   len         |   Count expression                    |   Tables
+|   Unary           |   =           |   Assignment operator                 |   Booleans, numbers, chars, tables, strings
 | -
-| Arithmetic        |   ++          |   Increment (by one)          |   Numbers and chars
-| Arithmetic        |   --          |   Decrement (by one)          |   Numbers and chars
-| Arithmetic        |   **          |   Exponentiate                |   Numbers and chars
-| Arithmetic        |   +           |   Addition                    |   Numbers and chars
-| Arithmetic        |   -           |   Subtraction                 |   Numbers and chars
-| Arithmetic        |   *           |   Multiplication              |   Numbers and chars
-| Arithmetic        |   /           |   Division                    |   Numbers and chars
-| Arithmetic        |   %           |   Modulo (remainder)          |   Numbers and chars
+| Arithmetic        |   ++          |   Increment (by one)                  |   Numbers and chars
+| Arithmetic        |   --          |   Decrement (by one)                  |   Numbers and chars
+| Arithmetic        |   **          |   Exponentiate                        |   Numbers and chars
+| Arithmetic        |   +           |   Addition                            |   Numbers and chars
+| Arithmetic        |   +=          |   Addition and assignment             |   Numbers and chars
+| Arithmetic        |   -           |   Subtraction                         |   Numbers and chars
+| Arithmetic        |   -=          |   Subtraction and assignment          |   Numbers and chars
+| Arithmetic        |   *           |   Multiplication                      |   Numbers and chars
+| Arithmetic        |   *=          |   Multiplication and assignment       |   Numbers and chars
+| Arithmetic        |   /           |   Division                            |   Numbers and chars
+| Arithmetic        |   /=          |   Division and assignment             |   Numbers and chars
+| Arithmetic        |   %           |   Modulo (remainder)                  |   Numbers and chars
+| Arithmetic        |   %=          |   Modulo (remainder) and assignment   |   Numbers and chars
 | -
-| Logical           |   !           |   Negation                    |   Booleans
-| Logical           |   &&          |   Short-circuit AND           |   Booleans
-| Logical           |   ||          |   Short-circuit OR            |   Booleans
+| Logical           |   !           |   Negation                            |   Booleans
+| Logical           |   &&          |   Short-circuit AND                   |   Booleans
+| Logical           |   \|\|        |   Short-circuit OR                    |   Booleans
 | -
-| Bitwise           |   &           |   Bitwise AND                 |   Booleans, numbers and chars
-| Bitwise           |   |           |   Bitwise OR                  |   Booleans, numbers and chars
-| Bitwise           |   ^           |   Bitwise XOR                 |   Booleans, numbers and chars
-| Bitwise           |   ~           |   Bitwise complement          |   Numbers and chars
-| Bitwise           |   >>          | Bitwise shift to the right    |   Numbers and chars
-| Bitwise           |   <<          | Bitwise shift to the left     |   Numbers and chars
+| Bitwise           |   &           |   Bitwise AND                         |   Booleans, numbers and chars
+| Bitwise           |   &=          |   Bitwise AND and assignment          |   Booleans, numbers and chars
+| Bitwise           |   \|          |   Bitwise OR                          |   Booleans, numbers and chars
+| Bitwise           |   \|=         |   Bitwise OR and assignment           |   Booleans, numbers and chars
+| Bitwise           |   ^           |   Bitwise XOR                         |   Booleans, numbers and chars
+| Bitwise           |   ^=          |   Bitwise XOR and assignment          |   Booleans, numbers and chars
+| Bitwise           |   ~           |   Bitwise complement                  |   Numbers and chars
+| Bitwise           |   ~=          |   Bitwise complement and assignment   |   Numbers and chars
+| Bitwise           |   >>          | Bitwise shift to the right            |   Numbers and chars
+| Bitwise           |   <<          | Bitwise shift to the left             |   Numbers and chars
 | -
-| Equality          |   ==          |   Equality check              |   Booleans, numbers, chars, tables, strings
-| Inequality        |   !=          |   Inequality check            |   Booleans, numbers, chars, tables, strings
-| Inequality        |   <>          |   Inequality check            |   Booleans, numbers, chars, tables, strings
+| Equality          |   ==          |   Equality check                      |   Booleans, numbers, chars, tables, strings
+| Inequality        |   !=          |   Inequality check                    |   Booleans, numbers, chars, tables, strings
+| Inequality        |   <>          |   Inequality check                    |   Booleans, numbers, chars, tables, strings
 | -
-| Comparison        |   <           |   Less than Comparison        |   Numbers and chars
-| Comparison        |   <=          |   Less than or equal to       |   Numbers and chars
-| Comparison        |   >           |   Greater than Comparison     |   Numbers and chars
-| Comparison        |   >=          |   Greater than or equal to    |   Numbers and chars
+| Comparison        |   <           |   Less than Comparison                |   Numbers and chars
+| Comparison        |   <=          |   Less than or equal to               |   Numbers and chars
+| Comparison        |   >           |   Greater than Comparison             |   Numbers and chars
+| Comparison        |   >=          |   Greater than or equal to            |   Numbers and chars
 | -
-| Member access     |   []          |   Array access                |   Tables
-| Member access     |   .           |   Member access               |   Tables
+| Member access     |   []          |   Array access                        |   Tables
+| Member access     |   .           |   Member access                       |   Tables
+
+## Built-ins
+
+Cahmann provides certain built-in functionalities to make writing code as simple as possible.
+These functionalities include printing to the console, writing to stderr, reading from and writing to files, and exiting the application.
+
+| Built-in                      | Description |
+|-------------------------------|-------------|
+| print \<string>               | Prints to the console
+| printe \<string>              | Prints to stderr
+| fread \<string>               | Reads the entire contents of a file
+| fwrite \<string> \<string>    | Writes a given string to a file
+| exit [int]                    | Exits the current application with or without an exit code
 
 ## Comments
 
@@ -126,21 +149,19 @@ Single-line comments may be defined as follows:
     # Single-line comment
 ```
 
-```lua
-    -- Single-line commnt
-```
-
 ### Multi-line comments
 
 While you may use single-line comments in as many lines as you wish to have multi-line comments,
 Cahmann also supported the following multi-line comment syntaxes.
 
-```
+```lua
     --[[
         Lua multi-line comment
-    ]]
+    ]]--
+```
 
-    -- [[
-        Lua-like multi-line comment
-    ]] --
+```c
+    /*
+        C multi-line comment
+    */
 ```

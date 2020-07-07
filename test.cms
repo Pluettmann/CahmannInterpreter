@@ -1,4 +1,4 @@
-/*
+--[[
     Possible data types:
     bool/boolean => 8bit signed (<= 0 = false, > 0 = true)
 
@@ -21,7 +21,10 @@
     decimal/longdouble => 128 bit floating point (-79,228,162,514,264,337,593,543,950,335 -> 79,228,162,514,264,337,593,543,950,335)
 
     string => character string (max. allocated memory)
-*/
+
+    Supported statements:
+       
+]]--
 
 
 func foo()
@@ -49,8 +52,11 @@ inline func add(x, y) return x + y
 
 func bar() ret string
     // valid
-    /* also valid */
+    -- Another comment
     # yet again valid
+    -- [[
+
+    ]]--
 
     var a = "ehllo"
     var c = 'c'
@@ -58,13 +64,13 @@ func bar() ret string
 endfunc
 
 func loops()
-    while x
-
+    while x do
+        if y then break
     endwhile
 
-    do
+    repeat
 
-    while y
+    until y
 
     for x = 0 to 255 comp voidfunc do
         if foobar()
