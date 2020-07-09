@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CahMann.Intepreter": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../test/interpretertest.cms"
+    }
+  }
+}

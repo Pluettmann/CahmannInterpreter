@@ -1,0 +1,17 @@
+--[[
+    Simple utility for testing Cahmann exports!
+]]
+
+module func dosomething()
+    print "I said: HELLO, WORLD!"
+endfunc
+
+local x = {
+    myfunc = dosomething
+}
+
+func dosomethingelse()
+    print "Suck it"
+endfunc
+
+export x

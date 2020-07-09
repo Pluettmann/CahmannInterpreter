@@ -1,0 +1,11 @@
+--[[
+    Simple module for testing imports!
+]]
+
+local mymodule = import "./exporttest.cms"
+
+dosomething() # Would be an error
+
+dosomethingelse() # Wouldn't be an error, because func in global scope
+
+mymodule.dosomething() # Wouldn't be an error

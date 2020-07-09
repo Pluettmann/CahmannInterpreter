@@ -1,0 +1,12 @@
+#!/bin/cmi
+
+/*
+    This is a simple test file for the Cahmann Interpreter!
+    Enjoy!
+*/
+
+func test()
+    print "Hello, World!"
+endfunc
+
+test()
