@@ -62,6 +62,8 @@ Instead of being a bracket-language like C and its derivatives, Cahmann uses sta
 | **count** | Denotes the beginning of a counting loop
 | **endcount** | Denotes the end of a counting loop
 | **break** | Breaks out of a loop
+| **option** | Denotes the beginning of an option statement
+| **export** | Export a given object so it may be used by other modules.
 
 
 ## Operators
@@ -117,6 +119,8 @@ There are several types of operator supported by Cahmann, they are listed below.
 | -
 | Member access     |   []          |   Array access                        |   Tables
 | Member access     |   .           |   Member access                       |   Tables
+| -
+| Concatenation     |   +           |   String Concatenation                |   Strings, chars
 
 ## Built-ins
 
