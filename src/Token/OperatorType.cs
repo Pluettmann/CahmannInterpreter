@@ -398,10 +398,21 @@ namespace Cahmann.Interpreter.Token {
         /// </summary>
         /// <remarks >
         /// <code >
-        /// []
+        /// [
         /// </code>
         /// </remarks>
-        ArrayAccessOperator,
+        ArrayAccessOperatorBegin,
+
+        /// <summary>
+        /// Array (table) access operator.
+        /// Used to access tables which are actually array :)
+        /// </summary>
+        /// <remarks >
+        /// <code >
+        /// ]
+        /// </code>
+        /// </remarks>
+        ArrayAccessOperatorEnd,
 
         /// <summary>
         /// Member access operator.
@@ -424,7 +435,36 @@ namespace Cahmann.Interpreter.Token {
         /// +
         /// </code>
         /// </remarks>
-        StringConcatOperator
+        StringConcatOperator,
+        #endregion
+
+        #region Function Call
+        /// <summary>
+        /// The first character of the function operator.
+        /// The function operator may either indicate a parameter list in a function head or the beginning/end of the function call operator.
+        /// </summary>
+        /// <remarks >
+        /// <code >
+        /// (
+        /// </code>
+        /// </remarks>
+        FunctionOperatorBegin,
+
+        /// <summary>
+        /// The second character of the function operator.
+        /// The function operator may either indicate a parameter list in a function head or the beginning/end of the function call operator.
+        /// </summary>
+        /// <remarks >
+        /// <code >
+        /// )
+        /// </code>
+        /// </remarks>
+        FunctionOperatorEnd,
+
+        /// <summary>
+        /// 
+        /// </summary>
+        FunctionCallOperator,
         #endregion
 
     }
