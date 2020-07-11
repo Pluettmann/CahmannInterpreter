@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Cahmann.Intepreter.Models {
+namespace Cahmann.Interpreter.Models {
 
     using System.Text;
     using System.Text.RegularExpressions;
