@@ -12,7 +12,7 @@ namespace Cahmann.Interpreter.Token {
         /// <summary>
         /// Marks the end of a Cahmann Script file.
         /// </summary>
-        EndOfFile,
+        EndOfFile
 
     }
 }
